@@ -11,8 +11,6 @@ Floating-point calculations are slow.
 
 Bresenham’s algorithm avoids floating point and uses decision parameters to select pixels.
 
-
-
 ---
 
 Basic idea
@@ -24,9 +22,6 @@ At each step, decide which pixel is closer to the ideal line
 Choose between two candidate pixels
 
 Use a decision variable to make this choice
-
-
-
 ---
 
 Assumptions (standard case)
@@ -70,27 +65,14 @@ If :
 
 Choose E (East) pixel
 
-
-
-
-
-
 Else:
 
 Choose NE (North-East) pixel
-
-
-
-
-
 
 Plot the selected pixel
 
 
 
-
-
----
 
 Decision parameter meaning
 
@@ -107,42 +89,22 @@ This ensures the plotted pixel stays closest to the actual line.
 Example
 
 For points (2, 2) to (8, 5):
-
-
-
-
-
-
 The algorithm then steps through x values and decides whether to increment y.
 
-
----
 
 Advantages
 
 Uses only integer arithmetic
-
 Fast and efficient
-
 Accurate pixel selection
-
 Suitable for hardware implementation
-
-
-
----
 
 Applications
 
 Line drawing in computer graphics
-
 Used in OpenGL, CAD systems, and game engines
-
 Basis for circle and ellipse algorithms
 
-
-
----
 
 In short:
 

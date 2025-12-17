@@ -1,0 +1,150 @@
+Bresenham’s Line Drawing Algorithm is an efficient algorithm used in computer graphics to draw a straight line between two points on a raster screen using only integer arithmetic. Because of this, it is very fast and widely used in graphics hardware.
+
+
+Why Bresenham’s Algorithm is needed
+
+A screen is made of pixels (discrete points).
+
+A mathematical line is continuous, so we must choose the closest pixel to represent the line.
+
+Floating-point calculations are slow.
+
+Bresenham’s algorithm avoids floating point and uses decision parameters to select pixels.
+
+
+
+---
+
+Basic idea
+
+For a line from point (x₀, y₀) to (x₁, y₁):
+
+At each step, decide which pixel is closer to the ideal line
+
+Choose between two candidate pixels
+
+Use a decision variable to make this choice
+
+
+
+---
+
+Assumptions (standard case)
+
+Slope 0 ≤ m ≤ 1
+
+Line is drawn from left to right
+
+If slope > 1, x and y roles are swapped
+
+
+
+---
+
+Algorithm steps (for 0 ≤ m ≤ 1)
+
+1. Input two endpoints:
+
+
+
+(x_0, y_0), (x_1, y_1)
+
+2. Compute differences:
+
+
+
+dx = x_1 - x_0,\quad dy = y_1 - y_0
+
+3. Initialize decision parameter:
+
+
+
+p_0 = 2dy - dx
+
+4. Plot the first point 
+
+
+5. For each x from x₀ to x₁:
+
+If :
+
+Choose E (East) pixel
+
+
+
+
+
+
+Else:
+
+Choose NE (North-East) pixel
+
+
+
+
+
+
+Plot the selected pixel
+
+
+
+
+
+---
+
+Decision parameter meaning
+
+p < 0 → midpoint is below the line → choose E
+
+p ≥ 0 → midpoint is above the line → choose NE
+
+
+This ensures the plotted pixel stays closest to the actual line.
+
+
+---
+
+Example
+
+For points (2, 2) to (8, 5):
+
+
+
+
+
+
+The algorithm then steps through x values and decides whether to increment y.
+
+
+---
+
+Advantages
+
+Uses only integer arithmetic
+
+Fast and efficient
+
+Accurate pixel selection
+
+Suitable for hardware implementation
+
+
+
+---
+
+Applications
+
+Line drawing in computer graphics
+
+Used in OpenGL, CAD systems, and game engines
+
+Basis for circle and ellipse algorithms
+
+
+
+---
+
+In short:
+
+Bresenham’s algorithm draws a straight line by choosing the nearest pixel at each step using integer calculations and a decision variable.
+

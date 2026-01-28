@@ -1,0 +1,39 @@
+In computer graphics, 2D transformations are mathematical operations used to modify the position, size, orientation, or shape of objects in a two-dimensional plane. These transformations are commonly represented using matrix operations and are essential for rendering, animation, and modeling.
+
+1. 2D Translation
+Translation is the process of shifting an object from one position to another along the x-axis, y-axis, or both, without changing its shape or orientation.
+If a point P(x, y) is translated by (tx, ty), the new position P′(x′, y′) is:
+x′ = x + tx
+y′ = y + ty
+Translation moves the object linearly in the plane.
+
+2. 2D Reflection
+Reflection produces a mirror image of an object with respect to a reference axis or line. The size and shape of the object remain unchanged, but its orientation is reversed.
+Common types of reflection:
+About x-axis: y → −y
+About y-axis: x → −x
+About origin: (x, y) → (−x, −y)
+Reflection is widely used in symmetry operations and image processing.
+
+3. 2D Scaling
+Scaling changes the size of an object either uniformly or non-uniformly along the x and y directions.
+If a point P(x, y) is scaled by factors (sx, sy), the new point P′(x′, y′) is:
+x′ = x × sx
+y′ = y × sy
+If sx = sy, uniform scaling occurs
+If sx ≠ sy, non-uniform scaling occurs
+Scaling can enlarge or shrink an object.
+
+4. 2D Rotation
+Rotation turns an object around a fixed point (usually the origin) by a specified angle θ in the anticlockwise direction.
+For a point P(x, y) rotated by angle θ:
+x′ = x cos θ − y sin θ
+y′ = x sin θ + y cos θ
+Rotation changes the orientation of an object while maintaining its shape and size.
+
+Applications
+Computer graphics and animation
+Game development
+Image processing
+CAD systems
+Simulation and modeling
